@@ -1,9 +1,9 @@
 /* место для вашего кода */
 
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.header { 
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    align-items: start;
     margin-top: 100px;
     margin-right: 24px;
     margin-left: 24px;
@@ -12,17 +12,17 @@
 .header__menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 }
 
 .header__links-list {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 10px;
+    margin-top: 36px;
     margin-left: 26px;
     font-size: 18px;
     line-height: 120%;
-    letter-spacing: 1px;
     list-style: circle;
     list-style-position: inside;
 }
@@ -36,24 +36,19 @@
 }
 
 .header__logo {
-    display: flex;
-    align-items: center;
-    margin-left: 36px;
-}
-
-.header__logo-image {
-    max-width: 45%;
+    min-width: 134px;
+    margin-left: 5px;
 }
 
 .header__address {
     align-content: center;
-    max-width: 20%;
+    max-width: 52%;
     margin-right: 26px;
     margin-left: auto;
     font-weight: 400;
     font-size: 18px;
     font-style: normal;
-    letter-spacing: 1px;
+    line-height: 24px;
 }
 
 .header__address p {
@@ -63,8 +58,8 @@
 
 .cover {
     position: relative;
-    margin-top: 96px;
-    margin-bottom: 160px;
+    margin-top: 86px;
+    margin-bottom: 175px;
     padding-top: 165px;
     padding-right: 50px;
     padding-left: 50px;
@@ -78,7 +73,7 @@
     z-index: 2;
     color: white;
     font-size: 100px;
-    line-height: 130%;
+    line-height: 123%;
     letter-spacing: 30px;
 }
 
@@ -88,15 +83,16 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 115px;
+    margin-top: 120px;
     padding-bottom: 56px;
     color: white;
 }
 
 .cover__description-text {
+    margin-left: 26px;
     font-size: 22px;
     text-transform: uppercase;
-    word-spacing: 20px;
+    word-spacing: 19px;
 }
 
 .cover::before {
@@ -107,7 +103,7 @@
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .lots {
@@ -116,7 +112,7 @@
 }
 
 .letter-spacing-extended {
-    letter-spacing: 50px;
+    letter-spacing: 60px;
 }
 
 .aligned-text_center {
@@ -136,9 +132,10 @@
 .bet-button {
     margin-left: auto;
     border-radius: 0;
-    padding: 12px 32px;
+    padding: 12px 24px;
     outline: 1px solid white;
     color: white;
+    font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-size: 22px;
     letter-spacing: 1px;
@@ -147,8 +144,8 @@
 }
 
 .lots__heading {
-    margin-bottom: 30px;
-    margin-left: 40px;
+    margin-bottom: 24px;
+    margin-left: 64px;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
@@ -164,15 +161,15 @@
 }
 
 .lots__card-list-item {
-    max-width: 330px;
+    max-width: 334px;
     list-style: none;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    height: 565px;
-    padding: 40px 50px;
+    min-height: 565px;
+    padding: 50.5px 40px;
     color: white;
 }
 
@@ -219,6 +216,7 @@
     position: relative;
     z-index: 2;
     margin-top: 0;
+    font-size: 22px;
     text-decoration: underline;
     text-transform: uppercase;
 }
@@ -234,7 +232,7 @@
 
 .lots__look-more-link {
     margin-top: 30px;
-    margin-left: 40px;
+    margin-left: 63px;
     font-size: 20px;
     text-decoration: underline;
 }
@@ -244,23 +242,29 @@
     flex-direction: column;
 }
 
+.about__text-grouped {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .about__logo {
     display: flex;
     justify-content: center;
     width: 240px;
     height: 240px;
+    margin-right: 71px;
     margin-left: 47px;
-    margin-right: 76px;
     border-radius: 50%;
     background-color: black;
 }
 
 .about__logo-image {
-    width: 70%;
+    width: 62%;
 }
 
 .about__title {
-    margin-top: 110px;
+    margin-top: 100px;
     margin-bottom: 100px;
     font-weight: 700;
     font-size: 40px;
@@ -270,15 +274,15 @@
 .about {
     display: flex;
     flex-direction: row;
-    margin-top: 170px;
-    margin-right: 24px;
-    margin-bottom: 160px;
+    margin-top: 182px;
+    margin-right: 28px;
+    margin-bottom: 177px;
     margin-left: 24px;
 }
 
 .about__text {
     font-size: 20px;
-    line-height: 26px;
+    line-height: 24.3px;
 }
 
 .footer {
@@ -315,6 +319,10 @@
 
 .no-left-margin {
     margin-left: 0;
+}
+
+.width-smaller {
+    max-width: 22%;
 }
 
 .footer__menu-link_active {
