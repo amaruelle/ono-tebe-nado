@@ -95,7 +95,7 @@
     word-spacing: 19px;
 }
 
-.cover::before, .card_type_film::before, .card_type_book::before, .card_type_picture::before {
+.overlay::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -180,6 +180,7 @@
 }
 
 .card-link {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
